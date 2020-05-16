@@ -1,0 +1,14 @@
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+[req_distinguished_name]
+C = SK
+L = Bratislava
+O = F5 Networks
+CN = bigipA.f5demo.app
+[v3_req]
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = bigipA.f5demo.app
