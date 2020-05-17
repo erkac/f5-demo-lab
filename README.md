@@ -1,6 +1,15 @@
 # F5 Demo Lab
 
+My sets of scripts to deploy F5 BIG-IP instance in local VMware Fusion.
+
 ## AS3 Folder
+
+Basic examples of F5 Automation Toolchain - AS3 to configure Application Services.
+
+* ./AS3/as3-dvwa.json
+  * Damn Vulnerable Web Application Running in F5 LAMP Server
+* ./AS3/as3-forwarding.json
+  * Generic L3 Forwarding VS Server
 
 ## DO Folder
 
