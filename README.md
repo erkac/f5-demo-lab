@@ -13,7 +13,18 @@ Basic examples of F5 Automation Toolchain - AS3 to configure Application Service
 
 ## DO Folder
 
+Experiments with Declarative On-Boarding.
+* ./DO/install-do.sh
+  * custom script to install DO Extension, later was replaced with F5-CLI in this demo
+* ./DO/do-vlab-full-example.json
+  * Full BIG-IP demo Provisioning
+  * In order to work with ./F5-CLI/03_do.sh it is need to
+    * rename ./DO/do-vlab-full-example.json to ./DO/do-vlab-full.json
+    * insert valid Base Reg Key in "regKey": 
+
 ## F5-CLI Folder
+
+Contains serveral scripts to start the fully running demo.
 
 ## Components
 
@@ -34,7 +45,7 @@ Basic examples of F5 Automation Toolchain - AS3 to configure Application Service
 
 ### DVWA
 
-* LAMP - 10.1.20.17
+* LAMP: 10.1.20.17
 * Credentials: hacker / hackyou
 
 ### httpbin
