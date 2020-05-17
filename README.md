@@ -55,10 +55,12 @@ Contains serveral scripts to start the fully configured BIG-IP. Main work is don
 ### XML Security GW
 
 Very Simple Web App, able to consume XML Inputs [docker-xml-server](https://github.com/erkac/docker-xml-server).
+> Not Part of this demo yet.
 
 ### JSON Security GW
 
 Very simple Web App, able to consume JSON Inputs [docker-json-server](https://github.com/erkac/docker-json-server).
+> Not Part of this demo yet.
 
 ## Other Notes
 
