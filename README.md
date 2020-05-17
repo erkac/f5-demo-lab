@@ -24,7 +24,7 @@ Experiments with Declarative On-Boarding.
 
 ## F5-CLI Folder
 
-Contains serveral scripts to start the fully running demo.
+Contains serveral scripts to start the fully configured BIG-IP. Main work is done by [F5-CLI](https://github.com/f5devcentral/f5-cli). More details in ./F5-CLI/README.md.
 
 ## Components
 
@@ -33,10 +33,12 @@ Contains serveral scripts to start the fully running demo.
 **Networking**
 
 * BIG-IP MGMT: 10.1.1.245
+  * MGMT GW: 10.1.1.2
 * Internal: 10.1.20.241
     * Floating: 10.1.20.240
 * External: 10.1.10.241
     * Floating: 10.1.10.240
+* Default GW: 10.1.10.2
 
 **Credentials**
 
@@ -45,14 +47,20 @@ Contains serveral scripts to start the fully running demo.
 
 ### DVWA
 
-* LAMP: 10.1.20.17
+* LAMP IP: 10.1.20.17
 * Credentials: hacker / hackyou
 
 ### httpbin
 
 ### XML Security GW
 
+Very Simple Web App, able to consume XML Inputs [docker-xml-server](https://github.com/erkac/docker-xml-server).
+
 ### JSON Security GW
 
-* demo33@fidnet.com / mountainman01
+Very simple Web App, able to consume JSON Inputs [docker-json-server](https://github.com/erkac/docker-json-server).
+
+## Other Notes
+
+~~* demo33@fidnet.com / mountainman01~~
 
