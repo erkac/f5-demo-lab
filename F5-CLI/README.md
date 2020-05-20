@@ -36,6 +36,7 @@ $ pip install f5-cli
 * Install the DO from `../DO/do-vlab-full.json`.
 * Please do not forget to insert the valid Registration Key into `"regKey":` variable in `../DO/do-vlab-full.json`. 
 * Sometimes (sometimes, when the instalation of DO takes a longer time) it returns an error, but please look for the final status of the command:
+
 ```json
     "result": {
         "class": "Result",
@@ -49,6 +50,19 @@ $ pip install f5-cli
 
 * Install the latest version of AS3 extension to BIG-IP.
 * Install the example declarations from asd `../AS3/` folder.
+* The same as in DO, please check for the result of AS3 declaration:
+
+```json
+    "results": [
+        {
+            "code": 200,
+            "host": "localhost",
+            "lineCount": 22,
+            "message": "success",
+            "runTime": 1012,
+            "tenant": "Forward_tenant"
+        }
+```
 
 ## F5-CLI Notes
 
