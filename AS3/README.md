@@ -17,13 +17,14 @@
 
 ### Remove the declaration
 
-    DELETE to https://{{bigip1}}/mgmt/shared/appsvcs/declare removes the declaration in the body
+`DELETE` to `https://{{bigip1}}/mgmt/shared/appsvcs/declare` removes the declaration in the body
 
 ### Add Node to a Pool
 
-1. review the declaration or first use GET https://<BIG-IP>/mgmt/shared/appsvcs/declare/{{tennant}}
-2. PATCH https://<BIG-IP>/mgmt/shared/appsvcs/declare with the following body
-```
+1. review the declaration or first use `GET https://<BIG-IP>/mgmt/shared/appsvcs/declare/{{tennant}}`
+2. `PATCH https://<BIG-IP>/mgmt/shared/appsvcs/declare` with the following body
+
+```json
 [
   {
     "op": "add",
@@ -34,8 +35,8 @@
 ```
 
 ### Parse the Auth token from the response
-```
-curl --location --request POST 'https://10.1.1.245/mgmt/shared/authn/login' --header 'Content-Type: application/json' --header 'Content-Type: text/plain' --data-raw '{
+```shell
+$ curl --location --request POST 'https://10.1.1.245/mgmt/shared/authn/login' --header 'Content-Type: application/json' --header 'Content-Type: text/plain' --data-raw '{
     "username":"admin",
     "password":"admin",
     "loginProviderName":"tmos"
