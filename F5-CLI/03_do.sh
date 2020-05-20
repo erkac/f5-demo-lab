@@ -13,6 +13,6 @@ f5 bigip extension do install
 f5 bigip extension do verify
 
 echo "Deploy DO JSON..."
-f5 bigip extension do create --declaration ./DO/do-vlab.json
+f5 bigip extension do create --declaration ../DO/do-vlab-full.json
 echo "Verify the deployed configuration..."
 f5 bigip extension do show
