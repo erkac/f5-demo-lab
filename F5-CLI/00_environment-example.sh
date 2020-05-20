@@ -1,11 +1,13 @@
 #!/bin/bash
 
-export BIGIP_ROOT='root'
-export BIGIP_ROOT_PWD='default'
+BIGIP_ROOT='root'
+BIGIP_ROOT_PWD='default'
 
-export BIGIP_ADMIN='admin'
-export BIGIP_ADMIN_PWD='admin'
+BIGIP_ADMIN='admin'
+BIGIP_ADMIN_PWD='admin'
 
-export BIGIP_MGMT='10.1.1.245'
+BIGIP_MGMT='10.1.1.245'
 
-export SSH_KEY='~/.ssh/id_rsa.pub'
+SSH_KEY='~/.ssh/id_rsa.pub'
+
+DO_JSON='../DO/do-vlab-full.json'

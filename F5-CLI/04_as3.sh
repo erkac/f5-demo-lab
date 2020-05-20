@@ -13,7 +13,8 @@ f5 bigip extension as3 install
 f5 bigip extension as3 verify
 
 echo "Deploy AS3 JSONs..."
-f5 bigip extension as3 create --declaration ./AS3/as3-dvwa.json
-f5 bigip extension as3 create --declaration ./AS3/as3-forwarding.json
+f5 bigip extension as3 create --declaration ${AS3_JSON_DVWA}
+f5 bigip extension as3 create --declaration ${AS3_JSON_FWD}
+
 echo "Verify the deployed configuration..."
 f5 bigip extension as3 show

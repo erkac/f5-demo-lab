@@ -1,43 +1,56 @@
 # F5 CLI
 
-[Homepage](https://github.com/f5devcentral/f5-sdk-python)
+[F5-CLI Homepage](https://github.com/f5devcentral/f5-sdk-python)
 
-## Setup
-    $ pip install f5-cli
+## F5-CLI instalation
+
+```shell
+$ pip install f5-cli
+```
 
 ## BIG-IP Preparation
 
-1. Console -> Login as root, set the password
+1. Console
+  * Login as root, set the password
+  * `# config` -> set the static IP and Default GW
+2. WebUI -> Login as admin, set the new password
 
-2. Console
-    * set the static IP and Default GW
-    * ddd
+## Shell Scripts
 
-3. WebUI -> Login as admin, set the password
+### ./00_environment.sh
 
-4. Create a openssl configuration file:
+* Setup the Environment using shell variables.
 
-```console
-# vi /config/openssl.cnf
+### ./01_ssh-key.sh
+
+* Install the ssh public key to F5 Shell.
+
+### ./02_fix_chrome.sh
+
+* Regenerate the certificate for F5 MGMT to resolve the issue in Chrome based browers (at least) on macOS. 
+* `./openssl.cnf` contains the SSL certificate configuration.
+
+### ./03_do.sh
+
+* Install the latest version of DO extension to BIG-IP.
+* Install the DO from `../DO/do-vlab-full.json`.
+* Please do not forget to insert the valid Registration Key into `"regKey":` variable in `../DO/do-vlab-full.json`. 
+* Sometimes (sometimes, when the instalation of DO takes a longer time) it returns an error, but please look for the final status of the command:
+```json
+    "result": {
+        "class": "Result",
+        "code": 200,
+        "message": "success",
+        "status": "OK"
+    },
 ```
 
-5. Create new certificate/key for tmui:
+### ./04_as3.sh
 
-```console
-# openssl req -x509 -nodes -days 730 -newkey rsa:2048 -keyout /config/httpd/conf/ssl.key/server.key -out /config/httpd/conf/ssl.crt/server.crt -config /config/openssl.cnf -extensions v3_req
-```
+* Install the latest version of AS3 extension to BIG-IP.
+* Install the example declarations from asd `../AS3/` folder.
 
-6. Verify certificate:
-
-```console
-# openssl x509 -in /config/httpd/conf/ssl.crt/server.crt -noout -text
-```
-7. restart httpd
-```console
-# bigstart restart httpd
-```
-
-## Configuration
+## F5-CLI Notes
 
 1. Disable the SSL Warnings
 
@@ -51,4 +64,10 @@ $ f5 config set-defaults --disable-ssl-warnings true
 $ f5 login --authentication-provider bigip --host 10.1.1.245 --user admin
 ```
 
-3. 
+3. Delete Declaration Examples
+
+```console
+$ f5 bigip extension as3 delete --declaration ../AS3/as3-dvwa.json`
+```
+
+At the moment it deletes the whole configuration, even with exact specification, which declaration you want to delete. [F5-CLI Delete Declaration Bug](https://github.com/f5devcentral/f5-cli/issues/12)
