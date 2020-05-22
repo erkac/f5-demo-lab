@@ -13,7 +13,9 @@ $ pip install f5-cli
 1. Console
   * Login as root, set the password
   * `# config` -> set the static IP and Default GW
-2. WebUI -> Login as admin, set the new password
+2. Change the admin password
+  * via WebUI -> Login as admin, set the new password
+  * or using tmsh -> `# tmsh modify auth user admin password <password>` and save the config `# tmsh save sys config`
 
 ## Shell Scripts
 
@@ -24,6 +26,7 @@ $ pip install f5-cli
 ### ./01_ssh-key.sh
 
 * Install the ssh public key to F5 Shell.
+* The script will ask you for the root password.
 
 ### ./02_fix_chrome.sh
 
@@ -35,7 +38,7 @@ $ pip install f5-cli
 * Install the latest version of DO extension to BIG-IP.
 * Install the DO from `../DO/do-vlab-full.json`.
 * Please do not forget to insert the valid Registration Key into `"regKey":` variable in `../DO/do-vlab-full.json`. 
-* Sometimes (sometimes, when the instalation of DO takes a longer time) it returns an error, but please look for the final status of the command:
+* Sometimes (sometimes, when the instalation of DO takes a longer time) it returns an error, but please look for the final status of the command (or double check using `f5 bigip extension do show`):
 
 ```json
     "result": {
