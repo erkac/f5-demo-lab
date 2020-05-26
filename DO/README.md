@@ -10,7 +10,7 @@
 4. Insert the valid Registration Key into `"regKey":` variable in `do-vlab-full.json`
 5. Install the DO using one of the following ways:
   * Postman - use the [F5 Automation Toolchain Collection](https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_collection.json)
-  * ./install-do.sh
+  * `./install-do.sh`
   * using the `../F5-CLI/03_do.sh` script
 
 ## Notes
