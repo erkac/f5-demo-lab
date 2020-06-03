@@ -13,6 +13,7 @@ $ pip install f5-cli
 1. Console
   * Login as root, set the password
   * `# config` -> set the static IP and Default GW
+  * `# tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the dhcp on the mgmt interface
 2. Change the admin password
   * via WebUI -> Login as admin, set the new password
   * or using tmsh -> `# tmsh modify auth user admin password <password>` and save the config `# tmsh save sys config`
