@@ -12,7 +12,8 @@
         "myLicense": {
             "class": "License",
             "licenseType": "regKey",
-            "regKey": ""
+            "regKey": "",
+            "overwrite": false
         },
         "myDns": {
             "class": "DNS",
@@ -20,7 +21,7 @@
                 "8.8.8.8"
             ],
             "search": [
-                "f5.com"
+                "f5demo.app"
             ]
         },
         "myNtp": {
@@ -103,10 +104,10 @@
             "network": "default",
             "mtu": 1500
         },
-            "dbvars": {
-        	"class": "DbVariables",
-        	"ui.advisory.enabled": true,
-        	"ui.advisory.color": "green",
+        "dbvars": {
+        	  "class": "DbVariables",
+           	"ui.advisory.enabled": true,
+          	"ui.advisory.color": "green",
             "ui.advisory.text": "/Common/hostname",
             "ui.system.preferences.recordsperscreen": 100,
             "dhclient.mgmt": "disable"

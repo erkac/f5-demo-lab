@@ -12,7 +12,7 @@
 # Configs
 config.env.sh
 00_environment.sh
-do-vlab-full.json
+do-vlab-*
 
 # Ansible
 hosts

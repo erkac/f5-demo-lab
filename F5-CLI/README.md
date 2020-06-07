@@ -28,6 +28,20 @@ $ pip install f5-cli
 
 * Install the ssh public key to F5 Shell.
 * The script will ask you for the root password.
+* the ssh keys can be also insalled using DO:
+```json
+ "root": {
+     "class": "User",
+     "userType": "root",
+     "oldPassword": "default",
+     "newPassword": "myNewPass1word",
+     "keys": [
+         "ssh-rsa <SSHKEY> <NAME>",
+         "ssh-rsa <SSHKEY> <NAME>"
+     ]
+
+ },
+ ```
 
 ### ./02_fix_chrome.sh
 
