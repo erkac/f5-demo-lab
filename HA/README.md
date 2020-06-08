@@ -6,3 +6,6 @@ For more details please refer to `../F5-CLI/README.md`.
 
 This folders contains example for two BIG-IPs HA deployment. The only difference to `../F5-CLI/README.md` is to, that this example is using for cycle in order to connect and configure IPs deffined in `BIGIP_MGMTS` array in the `./00_environment.sh` configuration file.
 
+## Notes
+
+[DO Clustering](https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/clustering.html)

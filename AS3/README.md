@@ -14,6 +14,7 @@
 [github F5 Networks](https://github.com/F5Networks/f5-appsvcs-extension/releases)
 
 ## Notes
+* For troubleshooting please look into `/var/log/restjavad.*.log` and `/var/log/restnoded/restnoded.log`
 
 ### Remove the declaration
 

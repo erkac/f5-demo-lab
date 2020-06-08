@@ -14,6 +14,7 @@
   * using the `../F5-CLI/03_do.sh` script
 
 ## Notes
+* For troubleshooting please look into `/var/log/restjavad.*.log` and `/var/log/restnoded/restnoded.log`
 
 ### DO RPM File
 [Download](https://github.com/F5Networks/f5-declarative-onboarding/releases)
