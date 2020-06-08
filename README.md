@@ -26,6 +26,10 @@ Experiments with Declarative On-Boarding.
 
 Contains serveral scripts to start the fully configured BIG-IP. Main work is done by [F5-CLI](https://github.com/f5devcentral/f5-cli). More details in ./F5-CLI/README.md.
 
+## HA Folder
+
+My try to configure a cluster of two BIG-IPs using **F5-CLI** and **DO**. Work in progress...
+
 ## Components
 
 ### BIG-IP
