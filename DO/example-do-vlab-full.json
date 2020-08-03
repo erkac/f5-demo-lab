@@ -6,9 +6,13 @@
     "label": "my BIG-IP declaration for declarative onboarding",
     "Common": {
         "class": "Tenant",
-        "hostname": "bigipA.f5demo.app",
-        "consoleInactivityTimeout": 3600,
-        "cliInactivityTimeout": 3600,
+        "mySystem": {
+          "class": "System",
+          "hostname": "bigipA.f5demo.app",
+          "consoleInactivityTimeout": 3600,
+          "cliInactivityTimeout": 3600,
+          "autoPhonehome": false
+        },
         "myLicense": {
             "class": "License",
             "licenseType": "regKey",

@@ -2,11 +2,14 @@
 
 [F5-CLI Homepage](https://github.com/f5devcentral/f5-sdk-python)
 
-## F5-CLI instalation
+## F5-CLI installation
 
 ```shell
 $ pip install f5-cli
+$ f5 --help
 ```
+
+I've found out that ```f5-cli``` is sensitive to ```python``` version.
 
 ## BIG-IP Preparation
 
@@ -28,7 +31,7 @@ $ pip install f5-cli
 
 * Install the ssh public key to F5 Shell.
 * The script will ask you for the root password.
-* the ssh keys can be also insalled using DO:
+* the ssh keys can be also installed using DO:
 ```json
  "root": {
      "class": "User",
@@ -45,7 +48,7 @@ $ pip install f5-cli
 
 ### ./02_fix_chrome.sh
 
-* Regenerate the certificate for F5 MGMT to resolve the issue in Chrome based browers (at least) on macOS. 
+* Regenerate the certificate for F5 MGMT to resolve the issue in Chrome based browsers (at least) on macOS. 
 * `./openssl.cnf` contains the SSL certificate configuration.
 
 ### ./03_do.sh
@@ -53,7 +56,7 @@ $ pip install f5-cli
 * Install the latest version of DO extension to BIG-IP.
 * Install the DO from `../DO/do-vlab-full.json`.
 * Please do not forget to insert the valid Registration Key into `"regKey":` variable in `../DO/do-vlab-full.json`. 
-* Sometimes (sometimes, when the instalation of DO takes a longer time) it returns an error, but please look for the final status of the command (or double check using `f5 bigip extension do show`):
+* Sometimes (sometimes, when the installation of DO takes a longer time) it returns an error, but please look for the final status of the command (or double check using `f5 bigip extension do show`):
 
 ```json
     "result": {
@@ -67,7 +70,7 @@ $ pip install f5-cli
 ### ./04_as3.sh
 
 * Install the latest version of AS3 extension to BIG-IP.
-* Install the example declarations from asd `../AS3/` folder.
+* Install the example declarations from the `../AS3/` folder.
 * The same as in DO, please check for the result of AS3 declaration:
 
 ```json
