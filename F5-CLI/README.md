@@ -36,6 +36,8 @@ I've found out that `f5-cli` is sensitive to `python` version.
 
 ## Shell Scripts
 
+> Before running these scripts, especially the `./03_do.sh`, please make sure, that the internet connectivity is working from BIG-IP eq. you are able to `ping activate.f5.com`.
+
 ### ./00_environment.sh
 
 * Setup the Environment using shell variables.
