@@ -9,18 +9,22 @@ $ pip install f5-cli
 $ f5 --help
 ```
 
-I've found out that ```f5-cli``` is sensitive to ```python``` version.
+I've found out that `f5-cli` is sensitive to `python` version.
 
 ## BIG-IP Preparation
 
 1. Console
   * Login as root, set the password
-  * `$ config` -> set the static IP and Default GW
-  * `$ tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the dhcp on the mgmt interface
+  * `# config` -> set the **static IP** and **Default GW**
+  * `# tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the dhcp on the mgmt interface
 
 1. Change the admin password
   * via WebUI -> Login as admin, set the new password
-  * or using tmsh -> `$ tmsh modify auth user admin password <password>` and save the config `$ tmsh save sys config`
+  * or using tmsh -> `# tmsh modify auth user admin password <password>` and save the config `# tmsh save sys config`
+
+1. Configure DNS
+  * although the DNS configuration is part of DO JSON, it has failed for me too many times, mainly because if fails to activate the license
+  * `# tmsh modify /sys dns name-servers add { 1.1.1.1 }` and save the config `# tmsh save sys config`
 
 1. Tune the mgmt - `restjavad` memory increased
 

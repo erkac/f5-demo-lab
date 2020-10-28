@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Initial Tests
+f5_bin=`which f5`
+if [ ! -e ${f5_bin} ] || [ -z ${f5_bin} ]; then
+  echo "f5-cli doesn't exist in the system."
+  echo "Please install using # pip install f5-cli"
+  echo "Exiting..."
+  exit 1
+fi
+
 BIGIP_ROOT='root'
 BIGIP_ROOT_PWD='default'
 
