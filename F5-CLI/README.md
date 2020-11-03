@@ -81,6 +81,8 @@ I've found out that `f5-cli` is sensitive to `python` version.
     },
     ```
 
+  * Monitoring what is going on, and also for troubleshooting `tail -f /var/log/restnoded/restnoded.log`
+
 ### ./04_as3.sh
 
   * Install the latest version of AS3 extension to BIG-IP.
