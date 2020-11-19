@@ -10,6 +10,8 @@ Basic examples of F5 Automation Toolchain - AS3 to configure Application Service
   * Damn Vulnerable Web Application Running in F5 LAMP Server
 * ./AS3/as3-forwarding.json
   * Generic L3 Forwarding VS Server
+* ./AS3/as3-petstore-waf.json
+  * Swagger Petstore with Declarative WAF Policy
 
 ## DO Folder
 
