@@ -11,7 +11,7 @@ Basic examples of F5 Automation Toolchain - AS3 to configure Application Service
 * ./AS3/as3-forwarding.json
   * Generic L3 Forwarding VS Server
 * ./AS3/as3-petstore-waf.json
-  * Swagger Petstore with Declarative WAF Policy
+  * [Swagger Petstore](https://petstore.swagger.io/) with [Declarative WAF Policy](https://devcentral.f5.com/s/articles/Advanced-WAF-v16-0-Declarative-API)
 
 ## DO Folder
 
