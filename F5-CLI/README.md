@@ -88,6 +88,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
   * Install the latest version of AS3 extension to BIG-IP.
   * Install the example declarations from the `../AS3/` folder.
   * The same as in DO, please check for the result of AS3 declaration.
+  * Uncomment `${AS3_JSON_PETSTORE}` in order to play with WAF declaration in AS3, for this kind of declaration you need to run at least _v16.0_ version of TMOS to be able to pull the swagger file specified in the WAF Policy `../AS3/awaf-declarative.json`
 
 ## F5-CLI Notes
 

@@ -18,6 +18,8 @@ echo
 echo "Deploy AS3 JSONs..."
 f5 bigip extension as3 create --declaration ${AS3_JSON_DVWA}
 f5 bigip extension as3 create --declaration ${AS3_JSON_FWD}
+#f5 bigip extension as3 create --declaration ${AS3_JSON_PETSTORE}
+
 echo
 echo "Verify the deployed configuration..."
 f5 bigip extension as3 show

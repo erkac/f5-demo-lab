@@ -3,15 +3,15 @@
 ## Resources
 
 ### TechDoc
-[F5 Clouddocs](https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/)
+- [F5 Clouddocs](https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/)
 
 ### Example Configurations
-[HTTP based Examples](https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3.5.1/refguide/additional-examples.html)
-
-[Non HTTP Services](https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/non-http-services.html)
+- [HTTP based Examples](https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3.5.1/refguide/additional-examples.html)
+- [Non HTTP Services](https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/non-http-services.html)
+- [AS3 WAF Declarative](https://devcentral.f5.com/s/articles/Advanced-WAF-v16-0-Declarative-API)
 
 ### Download
-[github F5 Networks](https://github.com/F5Networks/f5-appsvcs-extension/releases)
+- [github F5 Networks](https://github.com/F5Networks/f5-appsvcs-extension/releases)
 
 ## Notes
 * For troubleshooting please look into `/var/log/restjavad.*.log` and `/var/log/restnoded/restnoded.log`

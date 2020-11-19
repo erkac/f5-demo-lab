@@ -1,0 +1,32 @@
+{
+    "policy": {
+        "name": "policy-api-petstore",
+        "description": "Petstore API",
+        "template": {
+            "name": "POLICY_TEMPLATE_API_SECURITY"
+        },
+        "enforcementMode": "blocking",
+        "server-technologies": [
+            {
+                "serverTechnologyName": "Node.js"
+            },
+            {
+                "serverTechnologyName": "Unix/Linux"
+            },
+            {
+                "serverTechnologyName": "MongoDB"
+            }
+        ],
+        "signature-settings": {
+            "signatureStaging": false
+        },
+        "policy-builder": {
+            "learnOnlyFromNonBotTraffic": false
+        },
+        "open-api-files": [
+            {
+            "link": "https://petstore.swagger.io/v2/swagger.json"
+            }
+        ]
+    }
+}
