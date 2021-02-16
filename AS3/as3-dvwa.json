@@ -18,7 +18,7 @@
               "dvwa_pool": {
                 "class": "Pool",
                 "monitors": [
-                  "http"
+                  "tcp"
                 ],
                 "members": [{
                   "servicePort": 80,

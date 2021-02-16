@@ -32,6 +32,14 @@ Contains serveral scripts to start the fully configured BIG-IP. Main work is don
 
 My try to configure a cluster of two BIG-IPs using **F5-CLI** and **DO**. Work in progress...
 
+## WAF Folder
+
+Declarative WAF Example. Work in progress...
+
+## TEST
+
+Testing the deployed configuration usinf [Chef InSpec](https://docs.chef.io/inspec/).
+
 ## Components
 
 ### BIG-IP
