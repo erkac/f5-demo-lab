@@ -26,7 +26,7 @@ Experiments with Declarative On-Boarding.
 
 ## F5-CLI Folder
 
-Contains serveral scripts to start the fully configured BIG-IP. Main work is done by [F5-CLI](https://github.com/f5devcentral/f5-cli). More details in ./F5-CLI/README.md.
+Contains several scripts to start the fully configured BIG-IP. Main work is done by [F5-CLI](https://github.com/f5devcentral/f5-cli). More details in ./F5-CLI/README.md.
 
 ## HA Folder
 
@@ -38,7 +38,7 @@ Declarative WAF Example. Work in progress...
 
 ## TEST
 
-Testing the deployed configuration usinf [Chef InSpec](https://docs.chef.io/inspec/).
+Testing the deployed configuration using [Chef InSpec](https://docs.chef.io/inspec/).
 
 ## Components
 
