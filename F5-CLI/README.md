@@ -41,6 +41,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
 ### ./00_environment.sh
 
 * Setup the Environment using shell variables.
+* Included in all the scripts 01_... no need to execute separately.
 
 ### ./01_ssh-key.sh
 
@@ -70,7 +71,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
   * Install the latest version of DO extension to BIG-IP.
   * Install the DO from `../DO/do-vlab-full.json`.
   * Please do not forget to insert the valid Registration Key into `"regKey":` variable in `../DO/do-vlab-full.json`. 
-  * Sometimes (sometimes, when the installation of DO takes a longer time) it returns an error, but please look for the final status of the command (or double check using `f5 bigip extension do show`):
+  * Sometimes (when the installation of DO takes a longer time) it returns an error, but please look for the final status of the command (or double check using `f5 bigip extension do show`):
 
     ```json
     "result": {
