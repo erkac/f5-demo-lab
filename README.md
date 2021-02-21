@@ -1,28 +1,28 @@
 # F5 Demo Lab
 
-My sets of scripts to deploy F5 BIG-IP instance in local VMware Fusion.
+My sets of scripts to deploy **[F5 BIG-IP](https://www.f5.com)** instance in local VMware Fusion.
 
 ## AS3 Folder
 
 Basic examples of F5 Automation Toolchain - AS3 to configure Application Services.
 
-* ./AS3/as3-dvwa.json
+* `./AS3/as3-dvwa.json`
   * Damn Vulnerable Web Application Running in F5 LAMP Server
-* ./AS3/as3-forwarding.json
+* `./AS3/as3-forwarding.json`
   * Generic L3 Forwarding VS Server
-* ./AS3/as3-petstore-waf.json
+* `./AS3/as3-petstore-waf.json`
   * [Swagger Petstore](https://petstore.swagger.io/) with [Declarative WAF Policy](https://devcentral.f5.com/s/articles/Advanced-WAF-v16-0-Declarative-API)
 
 ## DO Folder
 
 Experiments with Declarative On-Boarding.
-* ./DO/install-do.sh
+* `./DO/install-do.sh`
   * custom script to install DO Extension, later was replaced with F5-CLI in this demo
-* ./DO/do-vlab-full-example.json
+* `./DO/do-vlab-full-example.json`
   * Full BIG-IP demo Provisioning
-  * In order to work with ./F5-CLI/03_do.sh it is need to
-    * rename ./DO/do-vlab-full-example.json to ./DO/do-vlab-full.json
-    * insert valid Base Reg Key in "regKey": 
+  * In order to work with `./F5-CLI/03_do.sh` it is need to
+    * rename `./DO/do-vlab-full-example.json` to .`/DO/do-vlab-full.json`
+    * insert valid Base Reg Key to `"regKey":` 
 
 ## F5-CLI Folder
 
@@ -46,25 +46,25 @@ Testing the deployed configuration using [Chef InSpec](https://docs.chef.io/insp
 
 **Networking**
 
-* BIG-IP MGMT: 10.1.1.245
-  * MGMT GW: 10.1.1.2
-* Internal: 10.1.20.241
-    * Floating: 10.1.20.240
-* External: 10.1.10.241
-    * Floating: 10.1.10.240
-* Default GW: 10.1.10.2
+* BIG-IP MGMT: *10.1.1.245*
+  * MGMT GW: *10.1.1.2*
+* Internal: *10.1.20.241*
+    * Floating: *10.1.20.240*
+* External: *10.1.10.241*
+    * Floating: *10.1.10.240*
+* Default GW: *10.1.10.2*
 
 **Credentials**
 
-* Login: admin
-* Password: admin
+* Login: *admin*
+* Password: *admin*
 
 ### DVWA
 
 > Not Part of this demo.
 
-* LAMP IP: 10.1.20.17
-* Credentials: hacker / hackyou
+* LAMP IP: *10.1.20.17*
+* Credentials: *hacker* / *hackyou*
 
 ### httpbin
 
