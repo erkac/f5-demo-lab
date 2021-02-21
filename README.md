@@ -26,7 +26,7 @@ Experiments with Declarative On-Boarding.
 
 ## F5-CLI Folder
 
-Contains several scripts to start the fully configured BIG-IP. Main work is done by [F5-CLI](https://github.com/f5devcentral/f5-cli). More details in ./F5-CLI/README.md.
+Contains several scripts to start the fully configured BIG-IP. Main work is done by [F5-CLI](https://github.com/f5devcentral/f5-cli). More details in [./F5-CLI/README.md](https://github.com/erkac/f5-demo-lab/blob/master/F5-CLI/README.md).
 
 ## HA Folder
 
