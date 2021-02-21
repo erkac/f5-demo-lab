@@ -61,22 +61,27 @@ Testing the deployed configuration using [Chef InSpec](https://docs.chef.io/insp
 
 ### DVWA
 
+> Not Part of this demo.
+
 * LAMP IP: 10.1.20.17
 * Credentials: hacker / hackyou
 
 ### httpbin
 
+> Not Part of this demo.
+
 ### XML Security GW
 
+> Not Part of this demo.
+
 Very Simple Web App, able to consume XML Inputs [docker-xml-server](https://github.com/erkac/docker-xml-server).
-> Not Part of this demo yet.
 
 ### JSON Security GW
 
+> Not Part of this demo.
+
 Very simple Web App, able to consume JSON Inputs [docker-json-server](https://github.com/erkac/docker-json-server).
-> Not Part of this demo yet.
 
 ## Other Notes
 
-~~* demo33@fidnet.com / mountainman01~~
 
