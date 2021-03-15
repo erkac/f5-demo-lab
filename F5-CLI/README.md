@@ -26,7 +26,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
   * although the DNS configuration is part of DO JSON, it has failed for me too many times, mainly because if fails to activate the license
   * `# tmsh modify /sys dns name-servers add { 1.1.1.1 }` and save the config `# tmsh save sys config`
 
-1. Tune the mgmt - `restjavad` memory increased
+1. Tune the mgmt - `restjavad` memory increase
 
     ```bash
     $ tmsh modify sys db provision.extramb value 1000
