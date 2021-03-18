@@ -39,7 +39,10 @@
             "class": "User",
             "userType": "root",
             "oldPassword": "default",
-            "newPassword": "default"
+            "newPassword": "default",
+            "keys": [
+              "ssh-rsa XYZ"
+            ]
         },
         "admin": {
             "class": "User",
