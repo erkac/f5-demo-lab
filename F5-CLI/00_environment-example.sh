@@ -23,3 +23,7 @@ DO_JSON='../DO/do-vlab-full.json'
 
 AS3_JSON_DVWA='../AS3/as3-dvwa.json'
 AS3_JSON_FWD='../AS3/as3-forwarding.json'
+AS3_JSON_PETSTORE='../AS3/as3-petstore-waf.json'
+
+TS_HTTP_GENERIC='../TS/ts-generic-http.json'
+AS3_TS_APP='../TS/as3-example-app.json'

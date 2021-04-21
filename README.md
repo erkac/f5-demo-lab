@@ -5,7 +5,6 @@ My sets of scripts to deploy **[F5 BIG-IP](https://www.f5.com)** instance in loc
 ## AS3 Folder
 
 Basic examples of F5 Automation Toolchain - AS3 to configure Application Services.
-
 * `./AS3/as3-dvwa.json`
   * Damn Vulnerable Web Application Running in F5 LAMP Server
 * `./AS3/as3-forwarding.json`
@@ -23,6 +22,9 @@ Experiments with Declarative On-Boarding.
   * In order to work with `./F5-CLI/03_do.sh` it is need to
     * rename `./DO/do-vlab-full-example.json` to .`/DO/do-vlab-full.json`
     * insert valid Base Reg Key to `"regKey":` 
+
+## TS Folder
+Testing Telemetry streaming module for logging. It contains just Generic HTTP Consumer `./TS/ts-generic-http.json` which is getting data from example app `./TS/as3-example-app.json`.
 
 ## F5-CLI Folder
 
