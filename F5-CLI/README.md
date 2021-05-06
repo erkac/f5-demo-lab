@@ -84,6 +84,10 @@ This will do the following:
   * Regenerate the certificate for F5 MGMT to resolve the issue in Chrome based browsers (at least) on macOS. 
   * `./openssl.cnf` contains the SSL certificate configuration.
 
+### ./03_system_tuning.sh
+
+  * Does all of steps mentioned in pre-requisits, except setting the root's password.
+
 ### ./04_do.sh
 
   * Install the latest version of DO extension to BIG-IP.
