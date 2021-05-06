@@ -1,5 +1,7 @@
 # F5 Demo Lab
 
+> F5 Automation Toolchain is supported in TMOS v13 or higher.
+
 My sets of scripts to deploy **[F5 BIG-IP](https://www.f5.com)** instance in local VMware Fusion.
 
 ## AS3 Folder
@@ -19,7 +21,7 @@ Experiments with Declarative On-Boarding.
   * custom script to install DO Extension, later was replaced with F5-CLI in this demo
 * `./DO/do-vlab-full-example.json`
   * Full BIG-IP demo Provisioning
-  * In order to work with `./F5-CLI/03_do.sh` it is need to
+  * In order to work with `./F5-CLI/04_do.sh` it is need to
     * rename `./DO/do-vlab-full-example.json` to .`/DO/do-vlab-full.json`
     * insert valid Base Reg Key to `"regKey":` 
 

@@ -11,7 +11,7 @@
 5. Install the DO using one of the following ways:
   * Postman - use the [F5 Automation Toolchain Collection](https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_collection.json)
   * `./install-do.sh`
-  * using the `../F5-CLI/03_do.sh` script
+  * using the `../F5-CLI/04_do.sh` script
 
 ## Notes
 * For troubleshooting please look into `/var/log/restjavad.*.log` and `/var/log/restnoded/restnoded.log`

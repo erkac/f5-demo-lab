@@ -11,6 +11,24 @@ $ f5 --help
 
 I've found out that `f5-cli` is sensitive to `python` version.
 
+## Makefile
+Recently I added the `Makefile` to this repository. So instead of manualy following all the procedures in the chapter below, you can now just run:
+```bash
+make LICENSE=<your_registration_key>
+```
+This will do the following:
+1. Install SSH keys to BIG-IP
+2. Fix issues with Config Utilit in Chrome on Mac
+3. Configure system parameters to run DO smoothly:
+  - Disable DHCP on MGMT interface,
+  - Set Admin Password,
+  - set DNS Server to 1.1.1.1
+  - Increase resources for MGMT Plane
+4. Onboard BIG-IP
+5. Deploy Application Services
+
+> For more information for each particular step and pre-requisits please read the chapter below.
+
 ## BIG-IP Preparation
 
 1. Console
@@ -18,15 +36,15 @@ I've found out that `f5-cli` is sensitive to `python` version.
   * `# config` -> set the **static IP** and **Default GW**
   * `# tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the dhcp on the mgmt interface
 
-1. Change the admin password
+2. Change the admin password
   * via WebUI -> Login as admin, set the new password
   * or using tmsh -> `# tmsh modify auth user admin password <password>` and save the config `# tmsh save sys config`
 
-1. Configure DNS
+3. Configure DNS
   * although the DNS configuration is part of DO JSON, it has failed for me too many times, mainly because if fails to activate the license
   * `# tmsh modify /sys dns name-servers add { 1.1.1.1 }` and save the config `# tmsh save sys config`
 
-1. Tune the mgmt - `restjavad` memory increase
+4. Tune the mgmt - `restjavad` memory increase
 
     ```bash
     $ tmsh modify sys db provision.extramb value 1000
@@ -36,7 +54,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
 
 ## Shell Scripts
 
-> Before running these scripts, especially the `./03_do.sh`, please make sure, that the internet connectivity is working from BIG-IP eq. you are able to `ping activate.f5.com`.
+> Before running these scripts, especially the `./04_do.sh`, please make sure, that the internet connectivity is working from BIG-IP eq. you are able to `ping activate.f5.com`.
 
 ### ./00_environment.sh
 
@@ -66,7 +84,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
   * Regenerate the certificate for F5 MGMT to resolve the issue in Chrome based browsers (at least) on macOS. 
   * `./openssl.cnf` contains the SSL certificate configuration.
 
-### ./03_do.sh
+### ./04_do.sh
 
   * Install the latest version of DO extension to BIG-IP.
   * Install the DO from `../DO/do-vlab-full.json`.
@@ -84,7 +102,7 @@ I've found out that `f5-cli` is sensitive to `python` version.
 
   * Monitoring what is going on, and also for troubleshooting `tail -f /var/log/restnoded/restnoded.log`
 
-### ./04_as3.sh
+### ./05_as3.sh
 
   * Install the latest version of AS3 extension to BIG-IP.
   * Install the example declarations from the `../AS3/` folder.
