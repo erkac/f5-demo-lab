@@ -12,13 +12,13 @@ $ f5 --help
 I've found out that `f5-cli` is sensitive to `python` version.
 
 ## Makefile
-Recently I added the `Makefile` to this repository. So instead of manualy following all the procedures in the chapter below, you can now just run:
+Recently I added the `Makefile` to this repository. So instead of manually following all the procedures in the chapter below, you can now just run:
 ```bash
 make LICENSE=<your_registration_key>
 ```
 This will do the following:
 1. Install SSH keys to BIG-IP
-2. Fix issues with Config Utilit in Chrome on Mac
+2. Fix issues with Config Utility in Chrome on Mac
 3. Configure system parameters to run DO smoothly:
   - Disable DHCP on MGMT interface,
   - Set Admin Password,
@@ -27,7 +27,7 @@ This will do the following:
 4. Onboard BIG-IP
 5. Deploy Application Services
 
-> For more information for each particular step and pre-requisits please read the chapter below.
+> For more information for each particular step and pre-requisites please read the chapter below.
 
 ## BIG-IP Preparation
 
@@ -86,7 +86,7 @@ This will do the following:
 
 ### ./03_system_tuning.sh
 
-  * Does all of steps mentioned in pre-requisits, except setting the root's password.
+  * Does all of steps mentioned in pre-requisites, except setting the root's password.
 
 ### ./04_do.sh
 
