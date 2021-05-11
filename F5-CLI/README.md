@@ -44,7 +44,7 @@ This will do the following:
   * although the DNS configuration is part of DO JSON, it has failed for me too many times, mainly because if fails to activate the license
   * `# tmsh modify /sys dns name-servers add { 1.1.1.1 }` and save the config `# tmsh save sys config`
 
-4. Tune the mgmt - `restjavad` memory increase
+4. Tune the mgmt - `restjavad` memory increase ([K00505373](https://support.f5.com/csp/article/K00505373))
 
     ```bash
     $ tmsh modify sys db provision.extramb value 1000
