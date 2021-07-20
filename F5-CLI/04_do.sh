@@ -5,6 +5,7 @@
 # F5-CLI
 echo "Configure F5-CLI Defaults..."
 f5 config set-defaults --disable-ssl-warnings true --auto-approve
+echo
 echo "Login to BIG-IP..."
 f5 login --authentication-provider bigip --host ${BIGIP_MGMT} --user ${BIGIP_ADMIN} --password ${BIGIP_ADMIN_PWD}
 
