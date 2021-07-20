@@ -10,7 +10,7 @@ ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify auth user admin password ${BIGIP
 echo "Set DNS Server to 1.1.1.1"
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify /sys dns name-servers add { 1.1.1.1 }"
 echo "Tune Management Plane Performance"
-ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db provision.extramb value 2048"
+ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db provision.extramb value 1024"
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db restjavad.useextramb value true"
 echo "Save Configuration..."
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh save sys config"
