@@ -34,7 +34,7 @@ This will do the following:
 1. Console
   * Login as root, set the password
   * `# config` -> set the **static IP** and **Default GW**
-  * `# tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the dhcp on the mgmt interface
+  * `# tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the DHCP on the MGMT interface
 
 2. Change the admin password
   * via WebUI -> Login as admin, set the new password
