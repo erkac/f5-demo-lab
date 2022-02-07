@@ -33,23 +33,40 @@ This will do the following:
 
 1. Console
   * Login as root, set the password
-  * `# config` -> set the **static IP** and **Default GW**
-  * `# tmsh modify sys global-settings mgmt-dhcp disabled` -> disable the DHCP on the MGMT interface
+
+  * type `config` to set the *static IP* and *default GW*
+
+  * disable the DHCP on the MGMT interface
+
+    ```shell
+    tmsh modify sys global-settings mgmt-dhcp disabled
+    tmsh save sys config
+    ```
 
 2. Change the admin password
-  * via WebUI -> Login as admin, set the new password
-  * or using tmsh -> `# tmsh modify auth user admin password <password>` and save the config `# tmsh save sys config`
+  * via **WebUI** -> Login as admin, set the new password
+
+  * or using **tmsh**
+
+    ```shell
+    tmsh modify auth user admin password <password>
+    tmsh save sys config
+    ```
 
 3. Configure DNS
   * although the DNS configuration is part of DO JSON, it has failed for me too many times, mainly because if fails to activate the license
-  * `# tmsh modify /sys dns name-servers add { 1.1.1.1 }` and save the config `# tmsh save sys config`
 
-4. Tune the mgmt - `restjavad` memory increase ([K00505373](https://support.f5.com/csp/article/K00505373))
+    ```shell
+    tmsh modify /sys dns name-servers add { 1.1.1.1 }
+    tmsh save sys config
+    ```
+
+4. Tune the **mgmt** - `restjavad` memory increase ([K00505373](https://support.f5.com/csp/article/K00505373))
 
     ```bash
-    $ tmsh modify sys db provision.extramb value 1000
-    $ tmsh modify sys db restjavad.useextramb value true
-    $ tmsh save sys config
+    tmsh modify sys db provision.extramb value 1000
+    tmsh modify sys db restjavad.useextramb value true
+    tmsh save sys config
     ```
 
 ## Shell Scripts
@@ -118,19 +135,19 @@ This will do the following:
 1. Disable the SSL Warnings
 
     ```console
-    $ f5 config set-defaults --disable-ssl-warnings true
+    f5 config set-defaults --disable-ssl-warnings true
     ```
 
 2. Login to BIG-IP
 
     ```console
-    $ f5 login --authentication-provider bigip --host 10.1.1.245 --user admin
+    f5 login --authentication-provider bigip --host 10.1.1.245 --user admin
     ```
 
 3. Delete Declaration Examples
 
     ```console
-    $ f5 bigip extension as3 delete --declaration ../AS3/as3-dvwa.json`
+    f5 bigip extension as3 delete --declaration ../AS3/as3-dvwa.json`
     ```
 
     At the moment it deletes the whole configuration, even with exact specification, which declaration you want to delete. [F5-CLI Delete Declaration Bug](https://github.com/f5devcentral/f5-cli/issues/12)
@@ -138,5 +155,5 @@ This will do the following:
 4. Troubleshooting
 
     ```shell
-    $ tail -f /var/log/restnoded/restnoded.log
+    tail -f /var/log/restnoded/restnoded.log
     ```
