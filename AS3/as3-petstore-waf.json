@@ -21,10 +21,17 @@
                         "10.1.10.20"
                     ],
                     "pool": "pool_petstore",
+                    "profileTCP": {
+                      "egress": "wan",
+                      "ingress": { "use": "TCP_Profile" } },
+                    "profileHTTP": { "use": "custom_http_profile" },
                     "serverTLS": "webtls",
                     "policyWAF": {
                       "use": "waf-petstore-api"
-                    }
+                    },
+                    "securityLogProfiles": [{
+                      "bigip": "/Common/Log illegal requests"
+                    }]
                 },
                 "webtls": {
                     "class": "TLS_Server",
@@ -39,7 +46,7 @@
                   "monitors": ["http"],
                   "members": [{
                       "servicePort": 8080,
-                      "serverAddresses": [ "10.1.20.9" ]
+                      "serverAddresses": [ "10.1.10.1" ]
                   }]
                 },
                 "waf-petstore-api": {
@@ -56,6 +63,14 @@
                         "ciphertext": "ZjVmNQ==",
                         "protected": "eyJhbGciOiJkaXIiLCJlbmMiOiJub25lIn0"
                     }
+                },
+                "custom_http_profile": {
+                  "class": "HTTP_Profile",
+                  "xForwardedFor": true
+                },
+                "TCP_Profile": {
+                  "class": "TCP_Profile",
+                  "idleTimeout": 60
                 }
             }
             
