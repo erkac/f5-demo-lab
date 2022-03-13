@@ -19,12 +19,15 @@ echo
 echo "Deploy DO JSON..."
 # Patch the license in JSON
 if [ -n "$1" ]; then
-  echo "Patching license to ${DO_JSON}..."
+  echo -n "Patching license to ${DO_JSON}..."
   LICENSE="$1"
   cat ${DO_JSON} | sed "s/\"regKey\": \".*\",/\"regKey\": \"$LICENSE\",/g" > ${DO_JSON}.tmp
+  echo "done."
+  echo "Deploying DO..."
   f5 bigip extension do create --declaration ${DO_JSON}.tmp
   rm -f ${DO_JSON}.tmp
 else
+  echo "Deploying DO..."
   f5 bigip extension do create --declaration ${DO_JSON}
 fi
 

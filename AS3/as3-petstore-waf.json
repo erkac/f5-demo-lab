@@ -44,7 +44,7 @@
                 },
                 "waf-petstore-api": {
                   "class": "WAF_Policy",
-                  "url": "https://file.f5demo.app/download/d5f4780667c50452cac1b00f317df7db",
+                  "url": "http://10.1.1.1:8080/awaf-declarative.json",
                   "ignoreChanges": true
                 },
                 "webcert": {
