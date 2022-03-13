@@ -1,4 +1,5 @@
 {
+    "$schema": "https://clouddocs.f5.com/products/waf-declarative-policy/_downloads/1ea282907775c0a30240d3d5da4c2708/schema_v16_1.json",
     "policy": {
         "name": "policy-api-petstore",
         "description": "Petstore API",
@@ -6,6 +7,9 @@
             "name": "POLICY_TEMPLATE_API_SECURITY"
         },
         "enforcementMode": "blocking",
+        "general":{
+          "trustXff": true
+        },
         "server-technologies": [
             {
                 "serverTechnologyName": "Node.js"
