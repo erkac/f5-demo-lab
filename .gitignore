@@ -1,6 +1,8 @@
+# General
 .vscode
 .env
 .DS_Store
+*.tmp
 
 # Terraform
 .terraform
