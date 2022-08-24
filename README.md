@@ -89,3 +89,5 @@ Very simple Web App, able to consume JSON Inputs [docker-json-server](https://gi
 ## Other Notes
 
 
+## Disclaimer
+This how-to is provided as is. Use it at your own responsibility.
