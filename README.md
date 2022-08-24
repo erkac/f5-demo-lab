@@ -38,7 +38,7 @@ My try to configure a cluster of two BIG-IPs using **F5-CLI** and **DO**. Work i
 
 ## WAF Folder
 
-Declarative WAF Example. Work in progress...
+Declarative WAF Policy in JSON format. `./WAF/start-web-server.sh` starts local WEB server which is able to serve `/awaf-declarative.json` policy when using AS3 declaration for *Petstore* example.
 
 ## TEST
 
