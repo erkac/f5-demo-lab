@@ -27,6 +27,10 @@ This will do the following:
 4. Onboard BIG-IP
 5. Deploy Application Services
 
+The only pre-requisite for `make LICENSE=<your_registration_key>` is to login to *BIG-IP console* (thus set the *root*/*admin* password) and run the `config` command to set static IP address.
+
+**Don't forget to run `start-web-server.sh` in `WAF` folder in order to let AWAF to download the Security policy.**
+
 > For more information for each particular step and pre-requisites please read the chapter below.
 
 ## BIG-IP Preparation
