@@ -51,7 +51,7 @@
                 },
                 "waf-petstore-api": {
                   "class": "WAF_Policy",
-                  "url": "http://10.1.1.1:8080/awaf-declarative.json",
+                  "url": "http://10.1.1.1:8282/awaf-declarative.json",
                   "ignoreChanges": true
                 },
                 "webcert": {
