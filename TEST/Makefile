@@ -1,0 +1,2 @@
+test:
+	inspec exec demo

@@ -21,9 +21,9 @@
                   "tcp"
                 ],
                 "members": [{
-                  "servicePort": 80,
+                  "servicePort": 81,
                   "serverAddresses": [
-                    "10.1.20.17"
+                    "10.1.20.1"
                   ]
                 }]
               }

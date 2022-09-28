@@ -23,3 +23,6 @@ as3:
 
 ts:
 	@./06_ts.sh
+
+test:
+	inspec exec ../TEST/demo
