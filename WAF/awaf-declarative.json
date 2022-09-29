@@ -29,7 +29,7 @@
         },
         "open-api-files": [
             {
-            "link": "https://petstore.swagger.io/v2/swagger.json"
+            "link": "http://10.1.1.1:8282/swagger.json"
             }
         ]
     }
