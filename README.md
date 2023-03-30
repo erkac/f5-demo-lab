@@ -14,6 +14,18 @@ Basic examples of F5 Automation Toolchain - AS3 to configure Application Service
 * `./AS3/as3-petstore-waf.json`
   * [Swagger Petstore](https://petstore.swagger.io/) with [Declarative WAF Policy](https://devcentral.f5.com/s/articles/Advanced-WAF-v16-0-Declarative-API)
 
+### BIG-IP conf to AS3 Conversion
+
+- [F5 BIG-IP Automation Config Converter](https://github.com/f5devcentral/f5-automation-config-converter)
+
+```bash
+# Start the BIG-IP ACC
+docker run --rm -v "$PWD":/app/data -p 8181:8080 f5devcentral/f5-automation-config-converter:latest serve
+
+# Send data for the conversion
+curl localhost:8181/converter -X POST  --form "ucs=@bigip.ucs" --form "output=bigip.json" --form "verbose=true" |jq .
+```
+
 ## DO Folder
 
 Experiments with Declarative On-Boarding.
