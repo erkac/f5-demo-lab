@@ -16,7 +16,6 @@ ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db restjavad.useextramb valu
 echo "Save Configuration..."
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh save sys config"
 echo "Tune Timeouts..."
-ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db icrd.timeout value 180"
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db restjavad.timeout value 180"
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db restnoded.timeout value 180"
 ssh -q ${BIGIP_ROOT}@${BIGIP_MGMT} "tmsh modify sys db icrd.timeout value 180"
